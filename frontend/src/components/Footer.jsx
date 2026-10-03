@@ -12,8 +12,8 @@ export default function Footer() {
                         <div className="flex items-center gap-space-sm">
                             <img
                                 alt="Mexacrio Technologies logo"
-                                className="h-8 w-8 rounded-lg object-cover ring-1 ring-primary/40 shadow-[0_0_12px_rgba(160,120,255,0.4)]"
-                                src="/mexacrio-logo.svg"
+                                className="h-8 w-8 rounded-full object-cover ring-1 ring-primary/40 shadow-[0_0_12px_rgba(160,120,255,0.4)]"
+                                src="/mexacrio.jpeg"
                             />
                             <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">
                                 MEXACRIO TECHNOLOGIES

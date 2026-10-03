@@ -24,9 +24,9 @@ export default function Navbar() {
                         <div className="flex items-center gap-space-md group">
 
                             <img
-                                src="/mexacrio-logo.svg"
+                                src="/mexacrio.jpeg"
                                 alt="Mexacrio Technologies logo"
-                                className="h-9 w-9 rounded-lg object-cover ring-1 ring-primary/40 shadow-[0_0_15px_rgba(160,120,255,0.4)] transition-transform group-hover:scale-105"
+                                className="h-9 w-9 rounded-full object-cover ring-1 ring-primary/40 shadow-[0_0_15px_rgba(160,120,255,0.4)] transition-transform group-hover:scale-105"
                             />
 
                             <span className="font-headline-sm text-sm text-on-surface tracking-tight font-semibold">
@@ -116,9 +116,9 @@ export default function Navbar() {
                     <div className="flex items-center gap-4">
 
                         <img
-                            src="/mexacrio-logo.svg"
+                            src="/mexacrio.jpeg"
                             alt="Mexacrio Technologies"
-                            className="h-8 w-8 rounded-lg object-cover ring-1 ring-primary/40 shadow-[0_0_12px_rgba(160,120,255,0.4)]"
+                            className="h-8 w-8 rounded-full object-cover ring-1 ring-primary/40 shadow-[0_0_12px_rgba(160,120,255,0.4)]"
                         />
 
                         <span className="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
