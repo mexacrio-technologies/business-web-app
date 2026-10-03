@@ -14,7 +14,7 @@ export default function Hero() {
                     {/* Left: Copy & Actions (Slides in from LEFT with Transparency) */}
                     <div className="lg:col-span-7 flex flex-col space-y-6">
                         <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full glass-panel-subtle w-fit border border-primary/30 shadow-[0_0_15px_rgba(160,120,255,0.2)]">
-                            <img src="/mexacrio-logo.svg" alt="Mexacrio Technologies logo" className="w-5 h-5 rounded-full object-cover ring-1 ring-primary/40 shadow-sm" />
+                            <img src="/mexacrio.jpeg" alt="Mexacrio Technologies logo" className="w-5 h-5 rounded-full object-cover ring-1 ring-primary/40 shadow-sm" />
                             <span className="font-label-sm text-label-sm text-primary tracking-widest uppercase font-semibold">
                                 AI • Software • Automation
                             </span>
