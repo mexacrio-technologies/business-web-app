@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { submitConsultation } from '../api/consultations';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -39,22 +41,16 @@ export default function Contact() {
         }
 
         try {
-            const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
-                || (import.meta.env.PROD ? 'https://business-web-app-kmcp.onrender.com' : '');
-            const response = await fetch(`${apiBaseUrl}/api/v1/consultations`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
-
-            if (!response.ok) {
-                const resData = await response.json().catch(() => null);
-                throw new Error(resData?.message || 'Server error occurred');
-            }
-
+            await submitConsultation(formData);
             setSubmitted(true);
         } catch (err) {
-            setErrorMsg(err instanceof Error ? err.message : 'Unable to submit your request. Please try again.');
+            const message = axios.isAxiosError(err)
+                ? err.response?.data?.message
+                    || (err.response ? 'Server error occurred' : 'Unable to connect to the server. Please try again.')
+                : err instanceof Error
+                    ? err.message
+                    : 'Unable to submit your request. Please try again.';
+            setErrorMsg(message);
         } finally {
             setLoading(false);
         }

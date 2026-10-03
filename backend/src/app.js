@@ -13,7 +13,6 @@ app.use(helmet());
 app.use(cors({
   origin: [
     config.clientUrl,
-    'https://business-web-app-nine.vercel.app',
     'http://localhost:5173',
     'http://127.0.0.1:5173'
   ],

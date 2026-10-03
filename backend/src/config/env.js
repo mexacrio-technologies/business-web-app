@@ -5,7 +5,7 @@ export const config = {
   port: process.env.PORT || 5000,
   nodeEnv: process.env.NODE_ENV || 'development',
   clientUrl: new URL(
-    process.env.CLIENT_URL || 'https://business-web-app-nine.vercel.app/'
+    process.env.CLIENT_URL || 'http://localhost:5173'
   ).origin,
   contactEmail: process.env.CONTACT_EMAIL || 'mexacrio.contact@gmail.com',
   smtpHost: process.env.SMTP_HOST || 'smtp.gmail.com',

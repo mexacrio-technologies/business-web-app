@@ -32,35 +32,28 @@ Business/
 
 ## Run locally
 
-Install and start the frontend:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-The Vite development server is available at `http://localhost:5173` and proxies `/api` requests to `http://localhost:5000`.
-
-From the repository root, `npm run build` installs the frontend dependencies and creates the production bundle in `frontend/dist`.
-
-Configure and start the backend in a second terminal:
+Install dependencies and start the backend in one terminal:
 
 ```bash
 cd backend
 npm install
-cp .env.example .env
+Copy-Item .env.example .env
 npm run dev
 ```
 
-Set `SMTP_PASS` in `backend/.env` to the Gmail App Password before submitting consultation requests. `SMTP_USER` is the Gmail account used to send messages; `CONTACT_EMAIL` is the mailbox that receives requests. Both default to `mexacrio.contact@gmail.com`. `MAIL_FROM` controls the sender name and address. Keep `.env` private and never commit it.
+If `backend/.env` already exists, keep it and update `CLIENT_URL=http://localhost:5173`. Add your Gmail App Password to `SMTP_PASS` if the consultation form should send email.
 
-### Production frontend/backend URLs
+In a second terminal, start the frontend:
 
-- Frontend: `https://business-web-app-nine.vercel.app/`
-- Backend: `https://business-web-app-kmcp.onrender.com`
+```bash
+cd frontend
+npm install
+npm run dev -- --host 127.0.0.1
+```
 
-The production frontend build reads `VITE_API_BASE_URL` from `frontend/.env.production` and sends API requests to the Render backend. On Render, set `CLIENT_URL=https://business-web-app-nine.vercel.app` (without a trailing slash); the backend normalizes it to the origin for CORS. If setting `VITE_API_BASE_URL` in the Vercel dashboard instead, use `https://business-web-app-kmcp.onrender.com` and redeploy the frontend.
+Open `http://localhost:5173`. The frontend sends API requests through the Vite proxy to the local backend at `http://localhost:5000`. The backend health check is at `http://localhost:5000/api/v1/health`.
+
+From the repository root, `npm run build` installs frontend dependencies and builds the site into `frontend/dist`. Local production builds use `http://localhost:5000` as the API server.
 
 ## API
 
@@ -69,10 +62,6 @@ The production frontend build reads `VITE_API_BASE_URL` from `frontend/.env.prod
 - `POST /api/v1/consultations` — Validate and email a consultation request
 
 The consultation endpoint accepts `fullName`, `email`, `company`, `serviceInterest`, and `goalsAndScope`. Email delivery must be configured for a successful submission. Requests are emailed and are not persisted in a database.
-
-## Search engine setup
-
-The frontend publishes canonical metadata, social sharing tags, Organization/Service structured data, `robots.txt`, and an XML sitemap for `https://business-web-app-nine.vercel.app/`. After deployment, submit `https://business-web-app-nine.vercel.app/sitemap.xml` in Google Search Console and verify the production URL and brand image are publicly crawlable.
 
 ## License
 

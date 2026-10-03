@@ -9,6 +9,6 @@ npm install
 npm run dev
 ```
 
-The frontend runs at `http://localhost:5173`. Its `/api` requests are proxied to the backend at `http://localhost:5000` during development. Production builds use `VITE_API_BASE_URL` from `.env.production` to reach the deployed backend; override it in the deployment environment if needed, then redeploy.
+The frontend runs at `http://localhost:5173`. During development, its `/api` requests are proxied to the backend at `http://localhost:5000`. Production builds also default to the local backend; set `VITE_API_BASE_URL` only when intentionally using a different API server.
 
 See the repository [README](../README.md) for full-stack setup and backend email configuration.
