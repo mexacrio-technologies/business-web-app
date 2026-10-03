@@ -40,7 +40,7 @@ export default function Contact() {
 
         try {
             const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
-                || (import.meta.env.PROD ? 'https://business-web-app-7m1j.onrender.com' : '');
+                || (import.meta.env.PROD ? 'https://business-web-app-kmcp.onrender.com' : '');
             const response = await fetch(`${apiBaseUrl}/api/v1/consultations`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

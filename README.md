@@ -58,9 +58,9 @@ Set `SMTP_PASS` in `backend/.env` to the Gmail App Password before submitting co
 ### Production frontend/backend URLs
 
 - Frontend: `https://business-web-app-nine.vercel.app/`
-- Backend: `https://business-web-app-7m1j.onrender.com`
+- Backend: `https://business-web-app-kmcp.onrender.com`
 
-The production frontend build reads `VITE_API_BASE_URL` from `frontend/.env.production` and sends API requests to the Render backend. On Render, set `CLIENT_URL=https://business-web-app-nine.vercel.app` (without a trailing slash); the backend normalizes it to the origin for CORS. If setting `VITE_API_BASE_URL` in the Vercel dashboard instead, use the same backend URL and redeploy the frontend.
+The production frontend build reads `VITE_API_BASE_URL` from `frontend/.env.production` and sends API requests to the Render backend. On Render, set `CLIENT_URL=https://business-web-app-nine.vercel.app` (without a trailing slash); the backend normalizes it to the origin for CORS. If setting `VITE_API_BASE_URL` in the Vercel dashboard instead, use `https://business-web-app-kmcp.onrender.com` and redeploy the frontend.
 
 ## API
 
