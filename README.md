@@ -55,7 +55,12 @@ npm run dev
 
 Set `SMTP_PASS` in `backend/.env` to the Gmail App Password before submitting consultation requests. `SMTP_USER` is the Gmail account used to send messages; `CONTACT_EMAIL` is the mailbox that receives requests. Both default to `mexacrio.contact@gmail.com`. `MAIL_FROM` controls the sender name and address. Keep `.env` private and never commit it.
 
-For a separately hosted frontend, set `CLIENT_URL` to its origin and configure `VITE_API_BASE_URL` in the frontend build environment to the backend origin.
+### Production frontend/backend URLs
+
+- Frontend: `https://business-web-app-nine.vercel.app/`
+- Backend: `https://business-web-app-7m1j.onrender.com`
+
+The production frontend build reads `VITE_API_BASE_URL` from `frontend/.env.production` and sends API requests to the Render backend. On Render, set `CLIENT_URL=https://business-web-app-nine.vercel.app` (without a trailing slash); the backend normalizes it to the origin for CORS. If setting `VITE_API_BASE_URL` in the Vercel dashboard instead, use the same backend URL and redeploy the frontend.
 
 ## API
 
