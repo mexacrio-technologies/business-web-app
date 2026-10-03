@@ -21,7 +21,7 @@ export default function Hero() {
                         </div>
 
                         <h1 className="text-4xl lg:text-5xl text-gray-200 tracking-tight leading-tight">
-                            AI Engineering, RAG Systems &amp; Custom Software
+                            mexacrio technologies: AI Automation, RAG Systems &amp; Custom Software
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-tertiary">
                                 for Growing Businesses
                             </span>
@@ -81,9 +81,6 @@ export default function Hero() {
                             className="w-full h-full object-contain rounded-xl transition-transform duration-500 hover:scale-[1.02]"
                         />
                     </div>
-
-
-
                 </div>
             </div>
         </section>

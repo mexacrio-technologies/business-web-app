@@ -13,6 +13,7 @@ export default function Contact() {
 
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [submittedMessage, setSubmittedMessage] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
     const [serviceOpen, setServiceOpen] = useState(false);
 
@@ -41,7 +42,8 @@ export default function Contact() {
         }
 
         try {
-            await submitConsultation(formData);
+            const response = await submitConsultation(formData);
+            setSubmittedMessage(response.message);
             setSubmitted(true);
         } catch (err) {
             const message = axios.isAxiosError(err)
@@ -140,11 +142,12 @@ export default function Contact() {
                                         Request Received
                                     </h4>
                                     <p className="text-on-surface-variant max-w-md mx-auto leading-relaxed">
-                                        Consultation request sent successfully. We will follow up with you within one business day.
+                                        {submittedMessage || 'Consultation request sent successfully. We will follow up with you within one business day.'}
                                     </p>
                                     <button
                                         onClick={() => {
                                             setSubmitted(false);
+                                            setSubmittedMessage('');
                                             setFormData({
                                                 fullName: '',
                                                 email: '',

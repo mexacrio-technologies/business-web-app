@@ -17,12 +17,15 @@
   "author": "Mexacrio Technologies",
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.22.3",
     "helmet": "^8.0.0",
     "morgan": "^1.10.0",
-    "nodemailer": "^10.0.13"
+    "nodemailer": "^10.0.13",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

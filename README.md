@@ -42,6 +42,7 @@ npm run dev
 ```
 
 If `backend/.env` already exists, keep it and update `CLIENT_URL=http://localhost:5173`. Add your Gmail App Password to `SMTP_PASS` if the consultation form should send email.
+The backend uses a local SQLite database at `backend/data/mexacrio.sqlite` and creates the `consultations` table on startup. No separate database server or SQL connection settings are required.
 
 In a second terminal, start the frontend:
 
@@ -59,9 +60,9 @@ From the repository root, `npm run build` installs frontend dependencies and bui
 
 - `GET /` — API welcome response
 - `GET /api/v1/health` — API health status
-- `POST /api/v1/consultations` — Validate and email a consultation request
+- `POST /api/v1/consultations` — Validate and store a consultation request in SQLite and an Excel workbook, then send an email notification
 
-The consultation endpoint accepts `fullName`, `email`, `company`, `serviceInterest`, and `goalsAndScope`. Email delivery must be configured for a successful submission. Requests are emailed and are not persisted in a database.
+The consultation endpoint accepts `fullName`, `email`, `company`, `serviceInterest`, and `goalsAndScope`. Submissions are stored in the SQLite `consultations` table and appended to `backend/data/consultations.xlsx` before the email notification is sent. If the workbook is open or otherwise unavailable, the request is still accepted, the export is retried automatically, and the response advises the user not to submit again. At startup, saved database submissions are reconciled into the workbook. If notification delivery fails, the saved request is still accepted and the response indicates that the email was not sent.
 
 ## License
 
