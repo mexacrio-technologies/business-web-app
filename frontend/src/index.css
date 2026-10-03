@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #0c0d12;
+        color: #e3e1e9;
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+        overflow-x: hidden;
+    }
+
+    body {
+        overscroll-behavior: none;
+    }
+}
+
+
+.glass-nav {
+    background: rgba(12, 13, 18, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transform: translateZ(0);
+}
+
+.glass-sidebar {
+    background: rgba(14, 15, 22, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
+    transform: translateZ(0);
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+    transform-origin: center top;
+    transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-reveal,
+    .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Background Subtle Grid Pattern */
+.bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Twinkling Dot Animation Keyframes ("tim-tim karte hue") */
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(0.75);
+        filter: drop-shadow(0 0 1px rgba(208, 188, 255, 0.2));
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.35);
+        filter: drop-shadow(0 0 8px rgba(208, 188, 255, 0.95)) drop-shadow(0 0 14px rgba(123, 208, 255, 0.8));
+    }
+}
+
+@keyframes twinkle-cyan {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+        filter: drop-shadow(0 0 2px rgba(123, 208, 255, 0.3));
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+        filter: drop-shadow(0 0 10px rgba(123, 208, 255, 1)) drop-shadow(0 0 16px rgba(160, 120, 255, 0.8));
+    }
+}
+
+.animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-twinkle-fast {
+    animation: twinkle 1.8s ease-in-out infinite;
+}
+
+.animate-twinkle-slow {
+    animation: twinkle 4.5s ease-in-out infinite;
+}
+
+.animate-twinkle-cyan {
+    animation: twinkle-cyan 2.8s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0c0d12;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(208, 188, 255, 0.25);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(208, 188, 255, 0.45);
+}

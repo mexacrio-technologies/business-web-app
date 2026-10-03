@@ -1,0 +1,30 @@
+{
+  "name": "mexacrio-technologies-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the Mexacrio Technologies website",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "mexacrio-technologies",
+    "backend"
+  ],
+  "author": "Mexacrio Technologies",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^10.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
