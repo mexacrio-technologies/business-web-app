@@ -63,6 +63,10 @@ For a separately hosted frontend, set `CLIENT_URL` to its origin and configure `
 
 The consultation endpoint accepts `fullName`, `email`, `company`, `serviceInterest`, and `goalsAndScope`. Email delivery must be configured for a successful submission. Requests are emailed and are not persisted in a database.
 
+## Search engine setup
+
+The frontend publishes canonical metadata, social sharing tags, Organization/Service structured data, `robots.txt`, and an XML sitemap for `https://business-web-app-nine.vercel.app/`. After deployment, submit `https://business-web-app-nine.vercel.app/sitemap.xml` in Google Search Console and verify the production URL and brand image are publicly crawlable.
+
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](./LICENSE).

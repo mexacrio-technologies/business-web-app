@@ -21,11 +21,10 @@ export default function Hero() {
                         </div>
 
                         <h1 className="text-4xl lg:text-5xl text-gray-200 tracking-tight leading-tight">
-                            Mexacrio Technologies: Your Trusted Partner in{' '}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-tertiary">
-                                AI Engineering
+                            AI Engineering, RAG Systems &amp; Custom Software
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-tertiary">
+                                for Growing Businesses
                             </span>
-                            , RAG Systems, &amp; Modern Software Business solution
                         </h1>
 
                         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
@@ -77,7 +76,8 @@ export default function Hero() {
                     <div className="lg:w-[520px] max-w-[520px] h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px] flex items-center justify-center p-3 sm:p-4 rounded-2xl border border-white/10 bg-white/[0.03] shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
                         <img
                             src={Business}
-                            alt="Business"
+                            alt="Mexacrio Technologies business and engineering"
+                            fetchPriority="high"
                             className="w-full h-full object-contain rounded-xl transition-transform duration-500 hover:scale-[1.02]"
                         />
                     </div>

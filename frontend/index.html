@@ -1,22 +1,128 @@
 <!doctype html>
 <html class="dark" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/mexacrio.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mexacrio Technologies builds AI systems, RAG solutions, and modern software for growing businesses." />
-    <title>Mexacrio Technologies | AI Engineering &amp; Modern Software</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    
-    <!-- Material Symbols Outlined -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-  </head>
-  <body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="/mexacrio.jpeg" />
+  <link rel="preload" as="image" href="/mexacrio.jpeg" fetchpriority="high" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0d12" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta
+    name="description"
+    content="Build production-ready AI and RAG systems, custom software, and intelligent automation with Mexacrio Technologies. Engineering for growing businesses."
+  />
+  <link rel="canonical" href="https://business-web-app-nine.vercel.app/" />
+  <title>AI Engineering &amp; Custom Software | Mexacrio Technologies</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Mexacrio Technologies" />
+  <meta property="og:title" content="AI Engineering &amp; Custom Software | Mexacrio Technologies" />
+  <meta
+    property="og:description"
+    content="Production-ready AI engineering, private RAG solutions, full-stack software, and intelligent automation for growing businesses."
+  />
+  <meta property="og:url" content="https://business-web-app-nine.vercel.app/" />
+  <meta property="og:image" content="https://business-web-app-nine.vercel.app/mexacrio.jpeg" />
+  <meta property="og:image:alt" content="Mexacrio Technologies — Innovation Built for Tomorrow" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Engineering &amp; Custom Software | Mexacrio Technologies" />
+  <meta
+    name="twitter:description"
+    content="Production-ready AI engineering, private RAG solutions, full-stack software, and intelligent automation for growing businesses."
+  />
+  <meta name="twitter:image" content="https://business-web-app-nine.vercel.app/mexacrio.jpeg" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://business-web-app-nine.vercel.app/#organization",
+          "name": "Mexacrio Technologies",
+          "url": "https://business-web-app-nine.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://business-web-app-nine.vercel.app/mexacrio.jpeg"
+          },
+          "email": "mexacrio.contact@gmail.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "mexacrio.contact@gmail.com",
+            "availableLanguage": ["English"]
+          },
+          "knowsAbout": [
+            "AI engineering",
+            "Large language model operations",
+            "Retrieval-augmented generation",
+            "Full-stack software architecture",
+            "Intelligent automation"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Technology Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI Engineering & LLM Operations",
+                  "description": "Production AI systems, retrieval-augmented generation pipelines, vector search, and customized embeddings."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Full-Stack Software Architecture",
+                  "description": "End-to-end web applications, APIs, distributed services, and cloud software."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Intelligent Automation",
+                  "description": "Workflow automation connecting business platforms and streamlining operational processes."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://business-web-app-nine.vercel.app/#website",
+          "url": "https://business-web-app-nine.vercel.app/",
+          "name": "Mexacrio Technologies",
+          "publisher": {
+            "@id": "https://business-web-app-nine.vercel.app/#organization"
+          },
+          "inLanguage": "en"
+        }
+      ]
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+</head>
+
+<body
+  class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
