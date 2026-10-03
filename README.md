@@ -42,6 +42,8 @@ npm run dev
 
 The Vite development server is available at `http://localhost:5173` and proxies `/api` requests to `http://localhost:5000`.
 
+From the repository root, `npm run build` installs the frontend dependencies and creates the production bundle in `frontend/dist`.
+
 Configure and start the backend in a second terminal:
 
 ```bash
